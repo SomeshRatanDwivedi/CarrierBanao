@@ -1,11 +1,12 @@
 import { SalaryRangesType } from '@/types/component-types';
+import { memo } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 
-const SalaryChart = ({data}:{data:SalaryRangesType[]}) => {
+const SalaryChart = ({ data }: { data: SalaryRangesType[] }) => {
   return (
     <div className="glass-card p-6 h-[400px] animate-fade-in">
-      <h2 className="text-xl font-bold mb-6">Salary Ranges by Role</h2>
+      <h2 className="text-xl font-bold mb-6">Salary Ranges by Role in (U.S)</h2>
       <ResponsiveContainer width="100%" height="100%">
         <AreaChart
           data={data}
@@ -51,4 +52,4 @@ const SalaryChart = ({data}:{data:SalaryRangesType[]}) => {
   );
 };
 
-export default SalaryChart;
+export default memo(SalaryChart);

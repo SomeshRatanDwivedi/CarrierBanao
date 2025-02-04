@@ -39,7 +39,7 @@ const JobInsights = () => {
       insights.keyTrends.length > 0 &&
       insights.salaryRanges.length > 0
     );
-  },[insights.demandLevel, insights.growthRate, insights.keyTrends.length, insights.marketOutlook, insights.salaryRanges.length, insights.topSkills.length]);
+  }, [insights.demandLevel, insights.growthRate, insights.keyTrends.length, insights.marketOutlook, insights.salaryRanges.length, insights.topSkills.length]);
 
   useEffect(() => {
     if (hasInsightsData() && !loading) {
@@ -55,9 +55,14 @@ const JobInsights = () => {
           <Loader />
         </div>
       )}
-      {(hasInsightsData() && !loading) ? <div ref={insightsRef}>
-        <JobInsightsInfo insights={insights} />
-      </div> : <JobInsightsDisclaimer />
+      {(hasInsightsData() && !loading) &&
+        <div ref={insightsRef}>
+          <JobInsightsInfo insights={insights} />
+        </div>
+      }
+      {
+        !loading && !hasInsightsData() &&
+        <JobInsightsDisclaimer />
       }
     </div>
 

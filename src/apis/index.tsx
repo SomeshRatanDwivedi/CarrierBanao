@@ -7,10 +7,10 @@ const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
 export const generateAIResponse = async (industry: string): Promise<InsightsType> => {
   const prompt = `
-          Analyze the current state of the ${industry} industry and provide insights in ONLY the following JSON format without any additional notes or explanations:
+          Analyze the current state of the ${industry} industry in US and provide insights in ONLY the following JSON format without any additional notes or explanations:
           {
             "salaryRanges": [
-              { "role": "string", "min": number, "max": number, "median": number, "location": "string" }
+              { "role": "string", "min": number, "max": number, "median": number}
             ],
             "growthRate": number,
             "demandLevel": "High" | "Medium" | "Low",

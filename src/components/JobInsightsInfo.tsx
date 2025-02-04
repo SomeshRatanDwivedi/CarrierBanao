@@ -10,8 +10,6 @@ import SalaryChart from './SalaryChart'
 import SkillBadge from './SkillBadge'
 import { InsightsType } from '@/types/component-types'
 
-
-
 const JobInsightsInfo = ({insights }: { insights: InsightsType }) => {
   const { topSkills, keyTrends } = insights;
   const getMarketOutlookInfo = (outlook: string) => {

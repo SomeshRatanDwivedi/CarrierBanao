@@ -56,11 +56,11 @@ const InfoSection = () => {
           <Button onClick={() => handleNavigate('/jobinsights')} size="lg" className="px-8 btn">
             Get Started
           </Button>
-          <Link to="https://www.youtube.com/roadsidecoder">
+          {/* <Link to="https://www.youtube.com/roadsidecoder">
             <Button size="lg" className="px-8 text-white">
               Watch Demo
             </Button>
-          </Link>
+          </Link> */}
         </div>
         <div className="hero-image-wrapper mt-5 md:mt-0">
           <div ref={imageRef} className="hero-image w-[90%] mx-auto">

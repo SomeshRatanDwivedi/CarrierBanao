@@ -1,8 +1,8 @@
-import React from 'react'
+import WorkInProgress from '@/components/WorkInProgress'
 
 const ResumeBuild = () => {
   return (
-    <div>ResumeBuild</div>
+    <WorkInProgress/>
   )
 }
 
